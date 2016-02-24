@@ -21,9 +21,9 @@
         <div class="row text-center">
           <h1>Our protagonist is:</h1>
           <!-- radio buttons-->
-          <input type="radio" ng-checked="{{mad.gender.pronoun == 'he'}}" ng-click="mad.gender.pronoun='he';mad.gender.possessive='his';mad.gender.poss='him'" id="male" name="gender" value="male" placeholder="" ng-model="radioGenderChoice" required>
+          <input type="radio" ng-checked="{{gender.pronoun == 'he'}}" ng-click="setGender('male')" id="male" name="gender" value="male" placeholder="" ng-model="radioGenderChoice" required>
           <label for="gender">Male</label>
-          <input type="radio" ng-checked="{{mad.gender.pronoun == 'she'}}" ng-click="mad.gender.pronoun='she';mad.gender.possessive='her'; mad.gender.poss='her'" id="female" name="gender" value="female" placeholder="" ng-model="radioGenderChoice" required>
+          <input type="radio" ng-checked="{{gender.pronoun == 'she'}}" ng-click="setGender('female')" id="female" name="gender" value="female" placeholder="" ng-model="radioGenderChoice" required>
           <label for="gender">Female</label>
         </div>
         <hr>
@@ -37,35 +37,35 @@
             <!-- required user inputs-->
             <div class="col-md-4">
               <div class="form-group">
-                <input type="text" class="form-control" id="name" placeholder="name" ng-model="mad.name" required> 
+                <input type="text" class="form-control" id="name" placeholder="name" ng-model="name" required>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" id="jobTitle" placeholder="job title" ng-model="mad.job" required>
+                <input type="text" class="form-control" id="jobTitle" placeholder="job title" ng-model="job" required>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" id="tediousTask" placeholder="tedious task" ng-model="mad.tedious" required>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="form-group">
-                <input type="text" class="form-control" id="dirtyTask" placeholder="dirty task" ng-model="mad.dirty_task" required>
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" id="celebrity" placeholder="celebrity" ng-model="mad.celebrity" required>
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" id="uselessSkill" placeholder="useless skill" ng-model="mad.useless" required>
+                <input type="text" class="form-control" id="tediousTask" placeholder="tedious task" ng-model="tedious" required>
               </div>
             </div>
             <div class="col-md-4">
               <div class="form-group">
-                <input type="text" class="form-control" id="adjective" placeholder="adjective" ng-model="mad.adjective" required>
+                <input type="text" class="form-control" id="dirtyTask" placeholder="dirty task" ng-model="dirty_task" required>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" id="obnoxousCelebrity" placeholder="obnoxious celebrity" ng-model="mad.obnoxious_celebrity" required>
+                <input type="text" class="form-control" id="celebrity" placeholder="celebrity" ng-model="celebrity" required>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" id="hugeNumber" placeholder="huge number" ng-model="mad.huge_number" required> 
+                <input type="text" class="form-control" id="uselessSkill" placeholder="useless skill" ng-model="useless" required>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <input type="text" class="form-control" id="adjective" placeholder="adjective" ng-model="adjective" required>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" id="obnoxousCelebrity" placeholder="obnoxious celebrity" ng-model="obnoxious_celebrity" required>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" id="hugeNumber" placeholder="huge number" ng-model="huge_number" required>
               </div>
             </div>
           </div>
@@ -76,9 +76,9 @@
         </form>
         <hr>
         <div ng-show="showMadlib && radioGenderChoice && madLibForm.$valid" class="row text center" id="story">
-         <h3><span class="input">{{ mad.name }}</span> was a(n) <span class="input">{{ mad.job }}</span> who loved technology. Although {{mad.gender.pronoun}} loved parts of {{ mad.gender.possessive }} job, {{ mad.gender.pronoun }} absolutely hated  <span class="input">{{ mad.tedious }}</span> and <span class="input">{{ mad.dirty }}</span>. So, <span class="input">{{ mad.name }}</span> met with {{ mad.gender.possessive }} life mentor <span class="input">{{ mad.celebrity }}</span> who told {{ mad.gender.poss }} to learn <span class="input">{{ mad.useless }}</span> with Thinkful. Thinkful didn't offer a course on <span class="input">{{ mad.useless }}</span> so {{ mad.gender.pronoun }} studied programming instead.</p>
+         <h3><span class="input">{{ name }}</span> was a(n) <span class="input">{{ job }}</span> who loved technology. Although {{gender.pronoun}} loved parts of {{ gender.possessive }} job, {{ gender.pronoun }} absolutely hated  <span class="input">{{ tedious }}</span> and <span class="input">{{ dirty }}</span>. So, <span class="input">{{ name }}</span> met with {{ gender.possessive }} life mentor <span class="input">{{ celebrity }}</span> who told {{ gender.poss }} to learn <span class="input">{{ useless }}</span> with Thinkful. Thinkful didn't offer a course on <span class="input">{{ useless }}</span> so {{ gender.pronoun }} studied programming instead.</p>
         <br>
-         <p>What a great decision! With {{ mad.gender.possessive }} new skills, <span class="input">{{ mad.name }}</span> built a(n) <span class="input">{{ mad.adjective }}</span> robot named <span class="input">{{ mad.obnoxious_celebrity }}</span> that not only loved <span class="input">{{ mad.dirty_task }}</span> but did it <span class="input">{{ mad.huge_number | number}}</span> times faster.</p></h3>
+         <p>What a great decision! With {{ gender.possessive }} new skills, <span class="input">{{ name }}</span> built a(n) <span class="input">{{ adjective }}</span> robot named <span class="input">{{ obnoxious_celebrity }}</span> that not only loved <span class="input">{{ dirty_task }}</span> but did it <span class="input">{{ huge_number | number}}</span> times faster.</p></h3>
          <hr>
          <!-- reset button -->
          <div class="row text-center" id="replayButton">
