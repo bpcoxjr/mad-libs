@@ -12,10 +12,20 @@ madLibs.controller('madLibsController',function($scope){
     $scope.showMadlib = false;
 
     $scope.submit = function(){
+        try {
+          if(typeof($scope.mad.gender) == 'undefined') {
+            genderError();
+          }
+        } catch (e) { genderError(); }
         $scope.showMadlib = true;
         $scope.submitted = true;
         console.log("Submit clicked!");
         console.log($scope.mad);
+
+        function genderError() {
+          alert('Please choose a gender');
+          return false;
+        }
     }
 
     $scope.reset = function(){
