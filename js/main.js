@@ -7,8 +7,6 @@ madLibs.run(function(VERSION, $rootScope) {
 
 madLibs.controller('madLibsController',function($scope){
 
-    $scope.data = {};
-
     $scope.showMadlib = false;
 
     $scope.submit = function(){
