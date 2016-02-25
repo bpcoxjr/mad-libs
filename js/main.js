@@ -7,8 +7,6 @@ madLibs.run(function(VERSION, $rootScope) {
 
 madLibs.controller('madLibsController',function($scope){
 
-<<<<<<< HEAD
-=======
     function initScope() {
       $scope.gender = {
       };
@@ -20,7 +18,6 @@ madLibs.controller('madLibsController',function($scope){
 
     initScope();
 
->>>>>>> 8937a546e3981bf16ea11fd78ba9fafdda25195a
     $scope.showMadlib = false;
 
     $scope.setGender = function(gender) {
