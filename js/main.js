@@ -41,11 +41,12 @@ madLibs.controller('madLibsController',function($scope){
         } catch (e) { genderError(); }
         $scope.showMadlib = true;
         $scope.submitted = true;
-        console.log("Submit clicked!");
         console.log($scope.mad);
 
-        function genderError() {
-          alert('Please choose a gender');
+        function genderError() { //show genderReminder div if no gender chosen
+          var genderReminder = document.getElementById('genderReminder').style.display = 'block';
+          var maleLabel = document.getElementById('maleLabel').style.color = 'red';
+          var femaleLabel = document.getElementById('femaleLabel').style.color = 'red';
           return false;
         }
     }
@@ -54,8 +55,6 @@ madLibs.controller('madLibsController',function($scope){
         document.getElementById('male').checked = document.getElementById('female').checked = false; // clear radio buttons visually
         $scope.name = $scope.job = $scope.tedious = $scope.dirty_task = $scope.celebrity = $scope.useless = $scope.adjective = $scope.obnoxious_celebrity = $scope.huge_number = undefined;
         initScope();
-
-        console.log("Reset clicked!");
         console.log($scope.mad);
     }
 });

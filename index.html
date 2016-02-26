@@ -15,16 +15,20 @@
           </div>
           <div class="col-md-8">
             <img src="img/ng-mad-libs-logo.png">
-            <p class="superBig">Automate This!</p>
+            <p class="automate">Automate This!</p>
           </div>
          </div>
         <div class="row text-center">
           <h1>Our protagonist is:</h1>
           <!-- radio buttons-->
           <input type="radio" ng-checked="{{gender.pronoun == 'he'}}" ng-click="setGender('male')" id="male" name="gender" value="male" placeholder="" ng-model="radioGenderChoice" required>
-          <label for="gender">Male</label>
+          <label for="gender" id="maleLabel">Male</label>
           <input type="radio" ng-checked="{{gender.pronoun == 'she'}}" ng-click="setGender('female')" id="female" name="gender" value="female" placeholder="" ng-model="radioGenderChoice" required>
-          <label for="gender">Female</label>
+          <label for="gender" id=femaleLabel>Female</label>
+          <!-- This div hidden unless no gender chosen by user -->
+          <div class="genderReminder" id="genderReminder">
+            Oops! You forgot to choose a gender! Please choose male or female to proceed.
+          </div>
         </div>
         <hr>
         <form name="madLibForm" ng-submit="submitted = false">
