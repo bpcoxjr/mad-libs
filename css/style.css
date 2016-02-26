@@ -13,3 +13,12 @@ label {
 	color: red;
 	display: none;
 }
+
+.form-group input {
+	border-radius: .5em;
+}
+
+#submitButton {
+	border-radius: .5em;
+	webkit-font-smoothing: antialiased;
+}
