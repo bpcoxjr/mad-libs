@@ -18,6 +18,11 @@ label {
 	border-radius: .5em;
 }
 
+.animate-hide {
+  transition: opacity linear 0.5s;
+  opacity: 1;
+}
+
 #submitButton {
 	border-radius: .5em;
 	webkit-font-smoothing: antialiased;
@@ -40,7 +45,7 @@ label {
   opacity: 0;
 }*/
 
-.story.ng-hide-remove,
+/*.story.ng-hide-remove,
 .story.ng-hide-add {
   display: block!important;
 }
@@ -73,4 +78,4 @@ label {
 @-webkit-keyframes show {
   from { opacity: 0; }
   to { opacity: 1; }
-}
+}*/

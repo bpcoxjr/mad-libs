@@ -22,11 +22,12 @@
          </div>
 
         <hr>
-
+        <h1 ng-hide="!showMadLib">hello world</h1>
+        <h1 ng-show="showMadLib">hello world</h1>
         <form name="madLibForm" ng-submit="submitted = false" ng-hide="showMadLib && madForm.$valid">
         <div class="row text-center">
           <h1>Our protagonist is:</h1>
-          
+
           <!-- radio buttons-->
           <input type="radio" ng-checked="{{gender.pronoun == 'he'}}" ng-click="setGender('male')" id="male" name="gender" value="male" placeholder="" ng-model="radioGenderChoice" required>
           <label for="gender" id="maleLabel">Male</label>
@@ -89,7 +90,7 @@
         <hr>
 
         <!-- results section -->
-        <div ng-show="showMadlib && radioGenderChoice && madLibForm.$valid" class="row text center story">
+        <div ng-show="showMadLib" class="animate-hide">
          <h3><span class="input">{{ name }}</span> was a(n) <span class="input">{{ job }}</span> who loved technology. Although {{gender.pronoun}} loved parts of {{ gender.possessive }} job, {{ gender.pronoun }} absolutely hated  <span class="input">{{ tedious }}</span> and <span class="input">{{ dirty_task }}</span>. So, <span class="input">{{ name }}</span> met with {{ gender.possessive }} life mentor <span class="input">{{ celebrity }}</span> who told {{ gender.poss }} to learn <span class="input">{{ useless }}</span> with Thinkful. Thinkful didn't offer a course on <span class="input">{{ useless }}</span> so {{ gender.pronoun }} studied programming instead.</p>
         <br>
          <p>What a great decision! With {{ gender.possessive }} new skills, <span class="input">{{ name }}</span> built a(n) <span class="input">{{ adjective }}</span> robot named <span class="input">{{ obnoxious_celebrity }}</span> that not only loved <span class="input">{{ dirty_task }}</span> but did it <span class="input">{{ huge_number | number}}</span> times faster.</p></h3>
