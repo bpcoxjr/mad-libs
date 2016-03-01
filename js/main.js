@@ -1,4 +1,4 @@
-var madLibs = angular.module('ngMadLibs', ['ngAnimate'])
+var madLibs = angular.module('ngMadLibs', [])
 
 madLibs.constant('VERSION', "1.1")
 madLibs.run(function(VERSION, $rootScope) {
@@ -43,8 +43,8 @@ madLibs.controller('madLibsController',function($scope){
 
         function genderError() { //show genderReminder div if no gender chosen
           var genderReminder = document.getElementById('genderReminder').style.display = 'block';
-          var maleLabel = document.getElementById('maleLabel').style.color = 'red';
-          var femaleLabel = document.getElementById('femaleLabel').style.color = 'red';
+          var maleLabel = document.getElementById('maleLabel').style.color = '#ff4d4d';
+          var femaleLabel = document.getElementById('femaleLabel').style.color = '#ff4d4d';
           return false;
         }
     }

@@ -35,7 +35,7 @@
 
           <!-- This div hidden unless no gender chosen by user -->
           <div class="genderReminder" id="genderReminder">
-            Oops! You forgot to choose a gender! Please choose male or female to proceed.
+            <strong><i>Oops! You forgot to choose a gender! Please choose male or female to proceed.</i></strong>
           </div>
         </div>
           <div class="row">
@@ -95,8 +95,8 @@
          <p>What a great decision! With {{ gender.possessive }} new skills, <span class="input">{{ name }}</span> built a(n) <span class="input">{{ adjective }}</span> robot named <span class="input">{{ obnoxious_celebrity }}</span> that not only loved <span class="input">{{ dirty_task }}</span> but did it <span class="input">{{ huge_number | number}}</span> times faster.</p></h3>
          <hr>
          <!-- reset button -->
-         <div class="row text-center" id="replayButton">
-         <button class="btn btn-primary" ng-click="reset()">Play Again!</button>
+         <div class="row text-center">
+         <button class="btn btn-lg btn-primary submit-btn" id="replayButton" ng-click="reset()">Play Again!</button>
          </div>
          <div>
             <hr>
@@ -114,8 +114,6 @@
   <!-- Angular JS script CDN link -->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.13/angular.min.js"></script>
 
-  <!-- Angular Animate script cdn link-->
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-animate.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

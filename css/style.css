@@ -23,12 +23,35 @@ label {
 	webkit-font-smoothing: antialiased;
 }
 
-.input {
-	font-size: 1.25em;
-	text-decoration: underline;
+#submitButton:hover {
+	background-color: #00ace6;
 }
 
-.story.ng-hide-add {
+#replayButton {
+	border-radius: .5em;
+	webkit-font-smoothing: antialiased;
+}
+
+#replayButton:hover {
+	background-color: #00ace6;
+}
+
+.input {
+	color: #ff4d4d;
+	font-style: italic;
+}
+
+.story {
+	-webkit-animation: 3s show;
+	animation: 3s show;
+}
+
+@-webkit-keyframes show {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+/*.story.ng-hide-add {
   -webkit-transition-delay: 0.5s;
   transition-delay: 0.5s;
   opacity:0;
@@ -41,3 +64,4 @@ label {
 .story.ng-hide-add, .results.ng-hide-remove {
   display: block!important;
 }
+*/
