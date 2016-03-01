@@ -18,8 +18,6 @@ madLibs.controller('madLibsController',function($scope){
 
     initScope();
 
-    $scope.showMadlib = false;
-
     $scope.setGender = function(gender) {
       if(gender == 'male') {
         $scope.gender.pronoun='he';
@@ -39,7 +37,7 @@ madLibs.controller('madLibsController',function($scope){
             genderError();
           }
         } catch (e) { genderError(); }
-        $scope.showMadlib = true;
+        $scope.showMadLib = true;
         $scope.submitted = true;
         console.log($scope.mad);
 
