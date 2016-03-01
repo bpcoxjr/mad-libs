@@ -22,3 +22,55 @@ label {
 	border-radius: .5em;
 	webkit-font-smoothing: antialiased;
 }
+
+.input {
+	font-size: 1.25em;
+	text-decoration: underline;
+}
+
+/*.story.ng-hide-add,
+.story.ng-hide-remove, {
+  -webkit-transition: 1s linear all;
+  transition: 1s linear all;
+  display: block!important;
+  opacity: 1;
+}
+
+.story.ng-hide {
+  opacity: 0;
+}*/
+
+.story.ng-hide-remove,
+.story.ng-hide-add {
+  display: block!important;
+}
+
+.story.ng-hide-add {
+  -webkit-transition: 1s hide;
+  transition: 1s linear all hide;
+}
+
+@keyframes hide {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@-webkit-keyframes hide {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+.story.ng-hide-remove {
+  -webkit-transition: 1s show;
+  transition: 1s linear all show;
+}
+
+@keyframes show {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@-webkit-keyframes show {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
