@@ -21,7 +21,6 @@ madLibs.controller('madLibsController',function($scope){
     $scope.showMadLib = false;
 
     $scope.setGender = function(gender) {
-      $scope.showMadLib = true;
       if(gender == 'male') {
         $scope.gender.pronoun='he';
         $scope.gender.possessive='his';
