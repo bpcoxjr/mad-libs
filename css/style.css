@@ -23,6 +23,10 @@ label {
   opacity: 1;
 }
 
+.animate-hide.ng-hide {
+	opacity:0;
+}
+
 #submitButton {
 	border-radius: .5em;
 	webkit-font-smoothing: antialiased;
