@@ -41,7 +41,7 @@ label {
 	font-style: italic;
 }
 
-.story {
+/*.story {
 	-webkit-animation: 3s show;
 	animation: 3s show;
 }
@@ -49,19 +49,14 @@ label {
 @-webkit-keyframes show {
 	from { opacity: 0; }
 	to { opacity: 1; }
+}*/
+
+.animate-hide {
+	transition: opacity linear 3s;
+	transition-delay: 3s;
+	opacity: 1;
 }
 
-/*.story.ng-hide-add {
-  -webkit-transition-delay: 0.5s;
-  transition-delay: 0.5s;
-  opacity:0;
+.animate-hide.ng-hide {
+	opacity: 0;
 }
-.story.ng-hide-remove {
-  -webkit-transition: 0.5s linear all;
-  transition: 0.5s linear all;
-  opacity: 1;
-}
-.story.ng-hide-add, .results.ng-hide-remove {
-  display: block!important;
-}
-*/
