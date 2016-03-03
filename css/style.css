@@ -41,7 +41,11 @@ label {
 	font-style: italic;
 }
 
-/*.story {
+.story.ng-hide {
+	opacity: 0;
+}
+
+.story:not(.ng-hide) {
 	-webkit-animation: 3s show;
 	animation: 3s show;
 }
@@ -49,14 +53,4 @@ label {
 @-webkit-keyframes show {
 	from { opacity: 0; }
 	to { opacity: 1; }
-}*/
-
-.animate-hide {
-	transition: opacity linear 3s;
-	transition-delay: 3s;
-	opacity: 1;
-}
-
-.animate-hide.ng-hide {
-	opacity: 0;
 }

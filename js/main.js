@@ -1,4 +1,4 @@
-var madLibs = angular.module('ngMadLibs', [ngAnimate])
+var madLibs = angular.module('ngMadLibs', [])
 
 madLibs.constant('VERSION', "1.1")
 madLibs.run(function(VERSION, $rootScope) {
