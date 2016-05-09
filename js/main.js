@@ -34,7 +34,7 @@ madLibs.controller('madLibsController',function($scope){
       console.log($scope);
         try {
           if(!Object.keys($scope.gender).length) { // check if the object is empty
-            genderError();
+            throw new Error("Something went wrong!");
           }
         } catch (e) { genderError(); }
         $scope.showMadLib = true;
