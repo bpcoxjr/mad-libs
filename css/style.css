@@ -41,6 +41,8 @@ label {
 	font-style: italic;
 }
 
+/*animations */
+
 .story.ng-hide {
 	opacity: 0;
 }
@@ -50,7 +52,17 @@ label {
 	animation: 3s show;
 }
 
+@keyframes show {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
 @-webkit-keyframes show {
 	from { opacity: 0; }
 	to { opacity: 1; }
 }
+
+@-moz-keyframes show {
+	from { opacity: 0; }
+	to { opacity: 1; }
+} 
